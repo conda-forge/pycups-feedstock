@@ -1,5 +1,5 @@
 {% set name = "pycups" %}
-{% set version = "2.0.1" %}
+{% set version = "2.0.4" %}
 
 
 package:
@@ -8,11 +8,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pycups-{{ version }}.tar.gz
-  sha256: 57434ce5f62548eb12949ca8217f066f4eeb21a5d6ab8b13471dce350e380c90
+  sha256: 843e385c1dbf694996ca84ef02a7f30c28376035588f5fbeacd6bae005cf7c8d
 
 build:
-  number: 4
-  skip: True  # [not linux]
+  number: 0
+  skip: true  # [not linux]
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
